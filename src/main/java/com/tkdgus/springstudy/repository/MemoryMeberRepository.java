@@ -1,5 +1,7 @@
-package com.tkdgus.springstudy.domain;
+package com.tkdgus.springstudy.repository;
 
+import com.tkdgus.springstudy.domain.Member;
+import com.tkdgus.springstudy.repository.MemerRepository;
 import java.util.HashMap;
 import java.util.Map;
 

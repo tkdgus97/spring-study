@@ -1,4 +1,6 @@
-package com.tkdgus.springstudy.domain;
+package com.tkdgus.springstudy.repository;
+
+import com.tkdgus.springstudy.domain.Member;
 
 public interface MemerRepository {
     Long save(Member member);
