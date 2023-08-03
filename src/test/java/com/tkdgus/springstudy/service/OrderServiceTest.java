@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 class OrderServiceTest {
     MemerRepository memerRepository = new MemoryMeberRepository();
-    OrderService orderService = new OrderServiceImpl();
+    OrderService orderService = new OrderServiceImpl(null, null);
 
     @Test
     void orderAdd() {

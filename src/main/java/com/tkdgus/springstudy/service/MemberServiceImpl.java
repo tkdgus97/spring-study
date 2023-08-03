@@ -5,7 +5,11 @@ import com.tkdgus.springstudy.repository.MemoryMeberRepository;
 
 public class MemberServiceImpl implements MemberService{
 
-    private final MemoryMeberRepository memoryMeberRepository = new MemoryMeberRepository();
+    private final MemoryMeberRepository memoryMeberRepository;
+
+    public MemberServiceImpl(MemoryMeberRepository memoryMeberRepository) {
+        this.memoryMeberRepository = memoryMeberRepository;
+    }
 
     @Override
     public void addMember(Member member) {

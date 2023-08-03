@@ -7,8 +7,13 @@ import com.tkdgus.springstudy.repository.MemoryMeberRepository;
 
 public class OrderServiceImpl implements OrderService {
 
-    private final MemerRepository memerRepository = new MemoryMeberRepository();
-    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+    private final MemerRepository memerRepository;
+    private final DiscountPolicy discountPolicy;
+
+    public OrderServiceImpl(MemerRepository memerRepository, DiscountPolicy discountPolicy) {
+        this.memerRepository = memerRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
     @Override
     public Order orderAdd(Long memberId, String itemName, int itemPrice) {
