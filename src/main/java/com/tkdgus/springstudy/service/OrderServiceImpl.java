@@ -4,12 +4,16 @@ import com.tkdgus.springstudy.domain.Member;
 import com.tkdgus.springstudy.domain.Order;
 import com.tkdgus.springstudy.repository.MemerRepository;
 import com.tkdgus.springstudy.repository.MemoryMeberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
 
     private final MemerRepository memerRepository;
     private final DiscountPolicy discountPolicy;
 
+    @Autowired
     public OrderServiceImpl(MemerRepository memerRepository, DiscountPolicy discountPolicy) {
         this.memerRepository = memerRepository;
         this.discountPolicy = discountPolicy;

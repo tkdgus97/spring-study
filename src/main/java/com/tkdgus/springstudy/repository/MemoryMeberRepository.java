@@ -4,7 +4,9 @@ import com.tkdgus.springstudy.domain.Member;
 import com.tkdgus.springstudy.repository.MemerRepository;
 import java.util.HashMap;
 import java.util.Map;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MemoryMeberRepository implements MemerRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
